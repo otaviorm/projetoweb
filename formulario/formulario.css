@@ -44,12 +44,6 @@ body::before {
     color: #9500ff;
 }
 
-.site:hover {
-    color: #ff4400;
-    background-color: #f0f0f0;
-    transition: color 0.3s, background-color 0.3s;
-}
-
 .site:active {
     color: #fd2600;
 }
@@ -113,13 +107,21 @@ form input[type="submit"]:hover {
 
 .site {
     text-decoration: none;
-    color: #0091ff;
+    color: #000000;
     transition: color 0.3s;
-    margin: 10px;
+    margin: 5px;
     padding: 10px;
-    border: 1px solid #0091ff;
+    border: 1px solid #ffffff;
+    border-color: #ccc;
+    background-color: #f0f0f0;
     display: inline-block;
     border-radius: 5px;
+}
+
+.site:hover {
+    color: #ffffff;
+    background-color: #001F4D;
+    transition: color 0.3s, background-color 0.3s;
 }
 
 @media (min-width: 360px) {
