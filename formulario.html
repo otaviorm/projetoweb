@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+    <title>Formulário de Cadastro</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="h1">Imobiliária XYZ</h1>
+            <nav id="nav">
+                <a class="site" href="inicio.html">Início</a>
+                <a class="site" href="catalago.html">Imóveis à Venda</a>
+                <a class="site" href="formulario.html">Cadastro</a>
+                <a class="site" href="sobre.html">Sobre Nós</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="forms">
+        <form id="cadastro-form" action="https://webhook.site/f649e56b-98a3-40de-bd7b-0ba271955ace" method="post">
+            <h2>Cadastro</h2>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="senha">Senha:</label><br>
+            <input type="password" id="senha" name="senha" required><br><br>
+
+            <label for="idade">Idade:</label><br>
+            <input type="number" id="idade" name="idade" min="18" required><br><br>
+
+            <label for="cidade">Cidade:</label><br>
+            <input type="text" id="cidade" name="cidade" required><br><br>
+
+            <input type="submit" value="Cadastrar">
+        </form>
+    </div>
+</body>
+</html>

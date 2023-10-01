@@ -1,0 +1,174 @@
+/* Reset de estilos padrão para o corpo da página */
+html,
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #0091ff;
+    color: white;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#texto {
+    font-size: 24px;
+    margin: 0;
+}
+
+#nav {
+    font-size: 16px;
+}
+
+.site {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.site:hover {
+    color: #ff4400;
+    background-color: #0091ff;
+}
+
+/* Estilos para a seção de boas-vindas */
+.bem_vindo {
+    background-color: #f0f0f0;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.bem_vindo h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.bem_vindo h3 {
+    font-size: 20px;
+}
+
+/* Animação de Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos para o catálogo de imóveis */
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.property {
+    flex-basis: 48%;
+    /* Utilize flex-basis para uma largura flexível */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+.property img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.property h4 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.property p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Animação de Slide In */
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #0091ff;
+    color: white;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilos para a classe .sobre-pro */
+.sobre-pro {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilos para a classe .lista */
+.lista {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Estilos para a classe .li */
+.li {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s;
+    animation: fadeIn 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.li:hover {
+    background-color: #f0f0f0;
+    color: #0091ff;
+}
