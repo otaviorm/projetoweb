@@ -9,7 +9,7 @@ body::before {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    z-index: -1; /* Coloca a imagem de paisagem atrás do conteúdo */
+    z-index: -1; 
 }
 
 
@@ -78,16 +78,21 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.input-field,
 form input[type="text"],
 form input[type="email"],
+form input[type="tel"],
 form input[type="password"],
 form input[type="number"],
-form textarea {
+form textarea,
+form select {
     width: 100%;
     padding: 10px;
+    margin-top: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    box-sizing: border-box;
 }
 
 form input[type="submit"] {

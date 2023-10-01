@@ -20,13 +20,26 @@
     </header>
 
     <div class="forms">
-        <form id="cadastro-form" action="https://webhook.site/f649e56b-98a3-40de-bd7b-0ba271955ace" method="post">
+        <form id="cadastro-form" action="https://webhook.site/c0318a75-ac66-4359-b8f0-ff7cdc53c6b8" method="post">
             <h2>Cadastro</h2>
             <label for="nome">Nome:</label><br>
             <input type="text" id="nome" name="nome" required><br><br>
+            
+            <label for="genero">Selecione seu gênero:</label><br>
+            <select id="genero" name="genero" class="input-field" required><br><br>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Prefiro não dizer</option>
+            </select><br><br>
+
+            <label for="cpf">CPF:</label><br>
+            <input type="text" id="cpf" name="cpf" required><br><br>
 
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required><br><br>
+
+            <label for="telefone">Telefone:</label><br>
+            <input type="tel" id="telefone" name="telefone" required><br><br>
 
             <label for="senha">Senha:</label><br>
             <input type="password" id="senha" name="senha" required><br><br>
