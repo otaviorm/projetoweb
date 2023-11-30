@@ -71,14 +71,13 @@
                     const endereco = document.createElement('p');
                     endereco.textContent = campos.endereco;
 
-                    const preco = document.createElement('p');
-                    preco.textContent = `Preço: R$ ${campos.valor}`;
+                    const valor = document.createElement('p');
+                    valor.textContent = `Preço: R$ ${campos.valor}`;
 
 
                     divAnuncio.appendChild(imagem);
                     divAnuncio.appendChild(h4);
                     divAnuncio.appendChild(descricao);
-                    divAnuncio.appendChild(preco);
                     divAnuncio.appendChild(qtd_quartos);
                     divAnuncio.appendChild(qtd_banheiro);
                     divAnuncio.appendChild(vagas);
