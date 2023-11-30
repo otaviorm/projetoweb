@@ -15,6 +15,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    background-image: url(https://s1.1zoom.me/b5353/208/Houses_Villa_Design_Pools_537090_1920x1080.jpg);
 }
 
 header {
@@ -28,6 +29,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    background: transparent;
+}
+
+
+.container-pro {
+    display: flex;
+    justify-content: center;
 }
 
 #texto {
@@ -61,6 +69,7 @@ header {
     background-color: #f0f0f0;
     padding: 20px;
     animation: fadeIn 1s ease-in-out forwards;
+    background-color: transparent;
 }
 
 .bem_vindo h2 {
@@ -143,6 +152,8 @@ footer p {
     border-radius: 5px;
     font-size: 16px;
     color: #333;
+    border: solid 2px black;
+    border-radius: 4%;
 }
 
 .lista {
@@ -175,5 +186,5 @@ footer p {
 }
 
 .familia{
-    margin: auto;
+   margin: auto;
 }

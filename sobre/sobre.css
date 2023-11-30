@@ -1,7 +1,5 @@
 html,
 body,
-h1,
-h2,
 h3,
 p,
 ul,
@@ -15,6 +13,12 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    background-image: url(https://s1.1zoom.me/b4253/638/Houses_Mansion_Design_Garage_Shrubs_532419_1920x1080.jpg);
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
 }
 
 header {
@@ -168,12 +172,11 @@ footer p {
 }
 
 .team-member img {
-    border: 1px solid #ccc;
+    border: 5px solid black;
     border-radius: 50%;
-    max-width: 5%;
+    max-width: 40%;
     height: auto;
     transition: transform 0.3s ease-in-out;
-    
 }
 
 .team-member:hover img {
@@ -190,7 +193,12 @@ footer p {
     margin: 0 20px;
 }
 
-@media (min-width: 360px) {
+.container-team {
+    display: flex;
+    margin-top: 120px;
+}
+
+@media (min-width: 360px){
     .property {
         margin-left: auto;
         margin-right: auto;
