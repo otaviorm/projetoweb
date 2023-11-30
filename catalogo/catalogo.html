@@ -59,6 +59,18 @@
                     const qtd_quartos = document.createElement('p');
                     qtd_quartos.textContent = `Quantidade de quartos: ${campos.qtd_quartos}`;
 
+                    const qtd_banheiro = document.createElement('p');
+                    qtd_banheiro.textContent = `Quantidade de banheiros: ${campos.qtd_banheiro}`;
+
+                    const vagas = document.createElement('p');
+                    vagas.textContent = `Quantidade de vagas: ${campos.vagas}`;
+
+                    const tamanho = document.createElement('p');
+                    tamanho.textContent = `Tamanho(m²): ${campos.tamanho}`;
+
+                    const endereco = document.createElement('p');
+                    endereco.textContent = campos.endereco;
+
                     const preco = document.createElement('p');
                     preco.textContent = `Preço: R$ ${campos.valor}`;
 
@@ -67,7 +79,12 @@
                     divAnuncio.appendChild(h4);
                     divAnuncio.appendChild(descricao);
                     divAnuncio.appendChild(preco);
-                    divAnuncio.appendChild(qtd_quartos);
+                    divAnuncio.appendChild(qtd_banheiro);
+                    divAnuncio.appendChild(vagas);
+                    divAnuncio.appendChild(tamanho);
+                    divAnuncio.appendChild(endereco);
+                    divAnuncio.appendChild(valor);
+
 
                     listaAnuncios.appendChild(divAnuncio);
                 });
