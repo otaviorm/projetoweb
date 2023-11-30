@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <header>
         <div class="container">
             <div id="texto">
@@ -26,17 +27,7 @@
 
     <section class="bem_vindo">
         <h2>Imóveis à Venda</h2>
-        <div class="catalog" id="lista-anuncios">
-            <!-- <div class="property">
-                <img src="" alt="Imagem do Imóvel 1">
-                <h4>Imóvel 1</h4>
-                <p>Descrição breve do imóvel. </p>
-                <p>Preço: R$ 500.000</p>
-                <a href="https://www.brasilcasas.com.br/blog/casa-de-madeira-pre-fabricada-visitando-o-showroom-de-campinas-sp/">Saiba mais</a>
-            </div>
-             -->
-
-        </div>
+        <div class="catalog" id="lista-anuncios"></div>
 
     </section>
 
@@ -44,20 +35,20 @@
     <script>
         const listaAnuncios = document.getElementById('lista-anuncios');
 
-        // Fazer uma requisição GET à API de anúncios
+        
         fetch('http://127.0.0.1:8000/core/')
             .then(response => response.json())
             .then(data => {
-                // Iterar sobre os dados recebidos da API e criar elementos HTML para cada anúncio
+                
                 data.forEach(anuncio => {
                     const divAnuncio = document.createElement('div');
                     divAnuncio.className = 'property';
 
                     campos = anuncio['fields']
 
-                    // const imagem = document.createElement('img');
-                    // imagem.src = anuncio.imagemUrl;
-                    // imagem.alt = `Imagem do Imóvel ${anuncio.id}`;
+                    const imagem = document.createElement('img');
+                    imagem.src = campos.url_imagem;
+                    imagem.alt = `Imagem do Imóvel ${campos.id}`;
 
                     const h4 = document.createElement('h4');
                     h4.textContent = campos.titulo;
@@ -68,15 +59,11 @@
                     const preco = document.createElement('p');
                     preco.textContent = `Preço: R$ ${campos.valor}`;
 
-                    const saibaMais = document.createElement('a');
-                    saibaMais.href = campos.linkSaibaMais;
-                    saibaMais.textContent = 'Saiba mais';
 
-                    //divAnuncio.appendChild(imagem);
+                    divAnuncio.appendChild(imagem);
                     divAnuncio.appendChild(h4);
                     divAnuncio.appendChild(descricao);
                     divAnuncio.appendChild(preco);
-                    divAnuncio.appendChild(saibaMais);
 
                     listaAnuncios.appendChild(divAnuncio);
                 });
