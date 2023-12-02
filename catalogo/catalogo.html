@@ -78,9 +78,8 @@
                     const botaoEditar = document.createElement('button');
                     botaoEditar.textContent = 'Editar';
                     botaoEditar.className = 'editar-button';
-                    botaoEditar.addEventListener('click', () => redirecionarParaEdicao(campos.id));
+                    botaoEditar.addEventListener('click', () => redirecionarParaEdicao(anuncio.id));
 
-                    
                     divAnuncio.appendChild(imagem);
                     divAnuncio.appendChild(h4);
                     divAnuncio.appendChild(descricao);
