@@ -46,6 +46,7 @@
 
                     campos = anuncio['fields']
 
+
                     const imagem = document.createElement('img');
                     imagem.src = campos.url_imagem;
                     imagem.alt = `Imagem do Imóvel ${campos.id}`;
@@ -74,7 +75,12 @@
                     const valor = document.createElement('p');
                     valor.textContent = `Preço: R$ ${campos.valor}`;
 
+                    const botaoEditar = document.createElement('button');
+                    botaoEditar.textContent = 'Editar';
+                    botaoEditar.className = 'editar-button';
+                    botaoEditar.addEventListener('click', () => redirecionarParaEdicao(campos.id));
 
+                    
                     divAnuncio.appendChild(imagem);
                     divAnuncio.appendChild(h4);
                     divAnuncio.appendChild(descricao);
@@ -84,6 +90,7 @@
                     divAnuncio.appendChild(tamanho);
                     divAnuncio.appendChild(endereco);
                     divAnuncio.appendChild(valor);
+                    divAnuncio.appendChild(botaoEditar);
 
 
                     listaAnuncios.appendChild(divAnuncio);
@@ -92,6 +99,10 @@
             .catch(error => {
                 console.error('Erro ao buscar dados da API:', error);
             });
+
+            function redirecionarParaEdicao(id) {
+            window.location.href = `../editar/editar.html?id=${id}`;
+            }
     </script>
 
 </body>
