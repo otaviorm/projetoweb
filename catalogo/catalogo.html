@@ -36,7 +36,7 @@
         const listaAnuncios = document.getElementById('lista-anuncios');
 
         
-        fetch('https://potential-halibut-5gv67q9xg9v36xj-8000.app.github.dev/core/')
+        fetch(`https://potential-halibut-5gv67q9xg9v36xj-8000.app.github.dev/core/`)
             .then(response => response.json())
             .then(data => {
                 
@@ -78,7 +78,12 @@
                     const botaoEditar = document.createElement('button');
                     botaoEditar.textContent = 'Editar';
                     botaoEditar.className = 'editar-button';
-                    botaoEditar.addEventListener('click', () => redirecionarParaEdicao(anuncio.id));
+                    botaoEditar.addEventListener('click', () => redirecionarParaEdicao(anuncio.pk));
+
+                    const botaoDeletar = document.createElement('button');
+                    botaoDeletar.textContent = 'Deletar';
+                    botaoDeletar.className = 'deletar-button';
+                    botaoDeletar.addEventListener('click', () => deletarAnuncio(anuncio.pk));
 
                     divAnuncio.appendChild(imagem);
                     divAnuncio.appendChild(h4);
@@ -90,6 +95,7 @@
                     divAnuncio.appendChild(endereco);
                     divAnuncio.appendChild(valor);
                     divAnuncio.appendChild(botaoEditar);
+                    divAnuncio.appendChild(botaoDeletar);
 
 
                     listaAnuncios.appendChild(divAnuncio);
@@ -98,10 +104,21 @@
             .catch(error => {
                 console.error('Erro ao buscar dados da API:', error);
             });
+            
 
             function redirecionarParaEdicao(id) {
             window.location.href = `../editar/editar.html?id=${id}`;
             }
+
+            function deletarAnuncio(id) {
+            fetch(`https://potential-halibut-5gv67q9xg9v36xj-8000.app.github.dev/core/deletar/${id}`, { method: 'DELETE' })
+                .then(response => response.json())
+                .then(data => {
+                })
+                .catch(error => console.error('Erro ao deletar anúncio:', error));
+            }
+
+
     </script>
 
 </body>
